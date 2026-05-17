@@ -101,3 +101,43 @@ if (itemPrimeiro) {
     console.log("Nenhum item encontrado com nota maior ou igual a 9");
 }
 
+//Agregação com reduce
+const somaNotas = catalogo.reduce((acc, item) => acc + item.nota, 0);
+const mediaGeral = somaNotas / catalogo.length;
+
+const assistidos = catalogo.filter(item => item.assistido);
+const somaAssistidos = assistidos.reduce((acc, item) => acc + item.nota, 0);
+const mediaAssistidos = assistidos.length ? somaAssistidos / assistidos.length : 0;
+
+console.log("Média geral:", mediaGeral.toFixed(2));
+console.log("Média assistidos:", mediaAssistidos.toFixed(2));
+
+//Checagens com some e every
+const itemAntigo = catalogo.some(item => item.ano < 2000);
+const todosTemGenero = catalogo.every(item => item.generos.length > 0);
+
+console.log("Itens antes de 2000:", itemAntigo);
+console.log("Todos os itens possuem pelo menos 1 gênero:", todosTemGenero);
+
+const output = document.getElementById("output");
+
+const total = catalogo.length;
+const filmes = catalogo.filter(item => item.tipo === "filme").length;
+const series = catalogo.filter(item => item.tipo === "serie").length;
+
+const ranking = [...catalogo]
+    .sort((a, b) => b.nota - a.nota)
+    .slice(0, 3);
+
+output.innerHTML = `
+  <h2>Resumo do Catálogo</h2>
+  <p>Total de itens: ${total}</p>
+  <p>Filmes: ${filmes} | Séries: ${series}</p>
+  <p>Não assistidos: ${naoAssistidos.length}</p>
+  <p>Média geral: ${mediaGeral.toFixed(2)}</p>
+
+  <h3>Ranking  3 melhores notas</h3>
+  <ol>
+    ${ranking.map(item => `<li>${item.titulo} - ${item.nota}</li>`).join("")}
+  </ol>
+`; 
