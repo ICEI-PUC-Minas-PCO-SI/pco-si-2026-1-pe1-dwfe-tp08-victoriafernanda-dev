@@ -5,15 +5,15 @@ Nesta atividade, você fazer exercícios de programação para vai praticar a ma
 
 ## Informações Gerais
 
-- Nome:
-- Matricula:
+- Nome: Victória Fernanda Santos Rocha
+- Matricula: 899093
 
 ## Prints do console do navegador
 
-<<  COLOQUE A IMAGEM - LISTAGEM DE TÍTULOS - AQUI >>
+![Listagem de títulos](images/listagemTitulos.png)
 
-<<  COLOQUE A IMAGEM - CÁLCULO DE MÉDIAS - AQUI >>
+![Cálculo de Médias](images/calculoMedias.png)
 
-<<  COLOQUE A IMAGEM - RESUMO DE VERIFICAÇÕES (SOME E EVERY) - AQUI >>
+![Resumo de Verificações](images/verificacoes.png)
 
-<<  COLOQUE A IMAGEM - PÁGINA COM O RESUMO - AQUI >>
+![Pagina com resumo](images/paginaResumo.png)
